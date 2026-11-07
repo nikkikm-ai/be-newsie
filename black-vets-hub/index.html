@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Vets Info Hub | Resources for African American Veterans</title>
+  <meta name="description" content="One place for African American veterans and their families to find benefits, health care, housing, jobs, legal help, and the history of Black service.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Crisis bar -->
+  <div class="crisis-bar" role="region" aria-label="Veterans Crisis Line">
+    <div class="wrap">
+      <strong>In crisis? Help is here 24/7.</strong>
+      <span>Dial <a href="tel:988">988, then press 1</a></span>
+      <span>Text <a href="sms:838255">838255</a></span>
+      <span><a href="https://www.veteranscrisisline.net/" target="_blank" rel="noopener">Chat online</a></span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Black Vets Info Hub home">
+        <span class="brand-mark" aria-hidden="true">★</span>
+        <span class="brand-text">Black Vets <em>Info Hub</em></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <a href="#start">Get Started</a>
+        <a href="#resources">Resources</a>
+        <a href="#equity">Know Your Rights</a>
+        <a href="#heritage">Heritage</a>
+        <a href="#orgs">Organizations</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">For African American veterans &amp; families</p>
+          <h1>You served. <span>You earned it.</span> Let's get it.</h1>
+          <p class="lede">Black Americans have fought in every war this nation has waged, often for a country that did not fight for them in return. This hub puts the benefits, care, and support you earned in one place, so you can claim them.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#start">Find help now</a>
+            <a class="btn btn-ghost" href="#resources">Browse all resources</a>
+          </div>
+        </div>
+        <ul class="hero-stats" aria-label="Key facts">
+          <li><strong>2M+</strong><span>Black veterans living in the U.S.</span></li>
+          <li><strong>1948</strong><span>Executive Order 9981 desegregates the armed forces</span></li>
+          <li><strong>Every war</strong><span>since the Revolution has included Black service members</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Get started -->
+    <section id="start" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Get started</p>
+          <h2>What do you need today?</h2>
+          <p>Pick the one that fits. Each card points you to the fastest first step.</p>
+        </header>
+        <div class="quick-grid">
+          <a class="quick" href="#resources" data-jump="benefits">
+            <span class="quick-icon" aria-hidden="true">📄</span>
+            <h3>File or fix a disability claim</h3>
+            <p>Start a claim, appeal a denial, or request a higher rating.</p>
+          </a>
+          <a class="quick" href="#resources" data-jump="health">
+            <span class="quick-icon" aria-hidden="true">🩺</span>
+            <h3>Get health care</h3>
+            <p>Enroll in VA health care, including PACT Act toxic-exposure care.</p>
+          </a>
+          <a class="quick" href="#resources" data-jump="mental">
+            <span class="quick-icon" aria-hidden="true">🧠</span>
+            <h3>Talk to someone</h3>
+            <p>Free, confidential counseling. Many counselors are veterans too.</p>
+          </a>
+          <a class="quick" href="#resources" data-jump="housing">
+            <span class="quick-icon" aria-hidden="true">🏠</span>
+            <h3>Keep a roof overhead</h3>
+            <p>Emergency housing, rent help, and VA home loans.</p>
+          </a>
+          <a class="quick" href="#resources" data-jump="jobs">
+            <span class="quick-icon" aria-hidden="true">💼</span>
+            <h3>Find work or start a business</h3>
+            <p>Job training, hiring programs, and veteran-owned business support.</p>
+          </a>
+          <a class="quick" href="#resources" data-jump="legal">
+            <span class="quick-icon" aria-hidden="true">⚖️</span>
+            <h3>Upgrade a discharge</h3>
+            <p>Free legal help to correct an unjust discharge and unlock benefits.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource directory -->
+    <section id="resources" class="section section-alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Resource directory</p>
+          <h2>Every resource, one search</h2>
+          <p>Filter by topic or search by keyword. Official VA programs are marked.</p>
+        </header>
+
+        <div class="directory-controls">
+          <label class="search">
+            <span class="sr-only">Search resources</span>
+            <input id="resource-search" type="search" placeholder="Search: GI Bill, PTSD, home loan, appeal…" autocomplete="off">
+          </label>
+          <div class="filters" role="group" aria-label="Filter by topic" id="filters"></div>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite"></p>
+        <div class="resource-grid" id="resource-grid"></div>
+        <noscript><p>Turn on JavaScript to view the searchable directory.</p></noscript>
+      </div>
+    </section>
+
+    <!-- Equity / know your rights -->
+    <section id="equity" class="section">
+      <div class="wrap equity">
+        <div class="equity-copy">
+          <p class="eyebrow">Know your rights</p>
+          <h2>Denied before? Ask again.</h2>
+          <p>Black veterans have long faced barriers to benefits they earned. After World War II, many were shut out of GI Bill home loans and college benefits by local, segregated administration. More recently, records obtained through litigation by advocates showed Black veterans were denied disability compensation at higher rates than white veterans.</p>
+          <p>A denial is not the final word. You have the right to appeal, the right to free representation, and the right to see your file.</p>
+          <a class="btn btn-navy" href="#resources" data-jump="benefits">See claims &amp; appeals help</a>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Get your records</h3>
+            <p>Request your C-file from VA and your service records (DD-214) from the National Archives.</p>
+          </li>
+          <li>
+            <h3>Get a free, accredited advocate</h3>
+            <p>Veterans Service Organizations and county veterans offices file claims at no cost. Never pay to file an initial claim.</p>
+          </li>
+          <li>
+            <h3>Choose your review path</h3>
+            <p>Supplemental claim, higher-level review, or Board appeal. Each has deadlines, so act within a year of your decision.</p>
+          </li>
+          <li>
+            <h3>Fix the discharge, too</h3>
+            <p>An other-than-honorable discharge can block benefits. Discharge review boards can upgrade it, especially where PTSD, TBI, or bias played a role.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Heritage -->
+    <section id="heritage" class="section section-dark">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Heritage</p>
+          <h2>Generations of courage</h2>
+          <p>Black service members defended freedom abroad while fighting for it at home. Know the legacy you carry.</p>
+        </header>
+        <ol class="timeline">
+          <li>
+            <span class="year">1866</span>
+            <h3>Buffalo Soldiers</h3>
+            <p>Congress creates all-Black regiments in the peacetime Army. They serve on the frontier, in Cuba, the Philippines, and beyond.</p>
+          </li>
+          <li>
+            <span class="year">1918</span>
+            <h3>Harlem Hellfighters</h3>
+            <p>The 369th Infantry spends 191 days in combat in World War I, longer than any other American unit of its size.</p>
+          </li>
+          <li>
+            <span class="year">1941</span>
+            <h3>Tuskegee Airmen</h3>
+            <p>The first Black military pilots train in Alabama and go on to fly with distinction over Europe and North Africa.</p>
+          </li>
+          <li>
+            <span class="year">1942</span>
+            <h3>Montford Point Marines</h3>
+            <p>The first Black Marines train at segregated Montford Point, North Carolina. About 20,000 pass through before 1949.</p>
+          </li>
+          <li>
+            <span class="year">1945</span>
+            <h3>The Six Triple Eight</h3>
+            <p>855 Black women of the 6888th Central Postal Directory Battalion clear a backlog of 17 million pieces of mail in Europe.</p>
+          </li>
+          <li>
+            <span class="year">1948</span>
+            <h3>Executive Order 9981</h3>
+            <p>President Truman orders equal treatment in the armed forces, opening the door to full integration.</p>
+          </li>
+          <li>
+            <span class="year">Today</span>
+            <h3>Your story</h3>
+            <p>From Korea and Vietnam to the Gulf, Iraq, and Afghanistan, the line continues. It runs through you.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Organizations -->
+    <section id="orgs" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Community</p>
+          <h2>Organizations that have your back</h2>
+          <p>Groups led by and for Black veterans, plus trusted partners.</p>
+        </header>
+        <div class="org-grid">
+          <article class="org">
+            <h3>National Association for Black Veterans (NABVETS)</h3>
+            <p>Veterans service organization offering claims help, advocacy, and local chapters nationwide.</p>
+            <a href="https://www.nabvets.org/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+          <article class="org">
+            <h3>Black Veterans Project</h3>
+            <p>Research, storytelling, and advocacy exposing racial disparities in military and veteran systems.</p>
+            <a href="https://www.blackveteransproject.org/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+          <article class="org">
+            <h3>Black Veterans for Social Justice</h3>
+            <p>Brooklyn-based nonprofit providing housing, employment, and supportive services to veterans.</p>
+            <a href="https://www.bvsj.org/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+          <article class="org">
+            <h3>VA Center for Minority Veterans</h3>
+            <p>VA office that makes sure minority veterans get equal access to benefits. Ask for your local Minority Veterans Program Coordinator.</p>
+            <a href="https://www.va.gov/centerforminorityveterans/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+          <article class="org">
+            <h3>Tuskegee Airmen National Historic Site</h3>
+            <p>National Park Service site preserving Moton Field and the story of America's first Black military aviators.</p>
+            <a href="https://www.nps.gov/tuai/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+          <article class="org">
+            <h3>National Museum of African American History &amp; Culture</h3>
+            <p>Smithsonian collections documenting Black military service from the Revolution to today.</p>
+            <a href="https://nmaahc.si.edu/" target="_blank" rel="noopener">Visit site →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section-alt">
+      <div class="wrap narrow">
+        <header class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Straight answers</h2>
+        </header>
+        <details>
+          <summary>Do I have to pay someone to help with my VA claim?</summary>
+          <p>No. Accredited Veterans Service Organizations, county veterans service officers, and many legal clinics help for free. Be wary of anyone charging to file an initial claim.</p>
+        </details>
+        <details>
+          <summary>My claim was denied years ago. Is it too late?</summary>
+          <p>Usually not. You can file a supplemental claim with new and relevant evidence at any time. New laws such as the PACT Act have also expanded eligibility for many conditions.</p>
+        </details>
+        <details>
+          <summary>Can I get VA care with an other-than-honorable discharge?</summary>
+          <p>Often, yes. VA can provide mental health care in many cases, and you can apply for a character-of-discharge review or a discharge upgrade. Free legal help is listed in the directory.</p>
+        </details>
+        <details>
+          <summary>Are there benefits for my family?</summary>
+          <p>Yes. Survivors and dependents may qualify for compensation, education benefits, health coverage, and burial benefits. Caregivers can get training and support too.</p>
+        </details>
+        <details>
+          <summary>Is this site run by the VA?</summary>
+          <p>No. This is an independent community resource. It links to official VA programs and trusted organizations, but it does not process claims or collect personal information.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <h2>Know a vet who needs this?</h2>
+        <p>Share it. One link can change a family's year.</p>
+        <button class="btn btn-gold" id="share-btn" type="button">Share this hub</button>
+        <p class="share-msg" id="share-msg" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <p class="brand footer-brand"><span class="brand-mark" aria-hidden="true">★</span> Black Vets <em>Info Hub</em></p>
+        <p>An independent resource for African American veterans and their families.</p>
+      </div>
+      <div>
+        <h3>Key numbers</h3>
+        <ul class="footer-list">
+          <li>Veterans Crisis Line: <a href="tel:988">988, press 1</a></li>
+          <li>VA Benefits: <a href="tel:18008271000">800-827-1000</a></li>
+          <li>VA Health Care: <a href="tel:18772228387">877-222-8387</a></li>
+          <li>Homeless Veterans: <a href="tel:18774243838">877-424-3838</a></li>
+          <li>Women Veterans: <a href="tel:18558296636">855-829-6636</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul class="footer-list">
+          <li><a href="#resources">Resource directory</a></li>
+          <li><a href="#equity">Know your rights</a></li>
+          <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#orgs">Organizations</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap disclaimer">
+      <p>Not affiliated with or endorsed by the U.S. Department of Veterans Affairs or any government agency. Information is for general guidance only; confirm details with the program directly. © <span id="year"></span> Black Vets Info Hub.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
